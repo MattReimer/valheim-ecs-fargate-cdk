@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+      "name": "valheim-ecs-fargate-cdk",
+			"path": "."
+		}
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
+    "files.watcherExclude": {
+      "**/node_modules/**": true,
+    },
+    "search.exclude": {
+      "**/node_modules/**": true,
+      "**/dist/**": true,
+      "**/cdk/**": true,
+    },
+    "files.exclude": {
+      "**/node_modules/**": true,
+      "**/*.egg-info": true
+    },
+  }
+}

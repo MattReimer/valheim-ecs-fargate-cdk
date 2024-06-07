@@ -1,12 +1,28 @@
-*.js
-!jest.config.js
-*.d.ts
 node_modules
+*.log
+logs
+.ssh
+id_rsa
+.env
+.webpack
+.env.*
+.serverless
+.venv*
+.warehouses/*.json
+dist
+gen
 
 # CDK asset staging directory
 .cdk.staging
+.stack.*
 cdk.out
-.env
+.data
 
-# JetBrains IDE
-.idea
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

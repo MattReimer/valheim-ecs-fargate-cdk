@@ -1,12 +1,11 @@
 {
   "name": "valheim-server-aws-cdk",
   "version": "0.1.0",
-  "bin": {
-    "valheim-server-aws-cdk": "bin/valheim-server-aws-cdk.js"
-  },
+  "bin": "bin/valheim-server-aws-cdk.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
+    "lint": "tsc --noEmit && eslint lib/**/* --fix",
     "pretest": "npm run build",
     "test": "jest",
     "cdk": "cdk"
@@ -14,9 +13,20 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.109",
     "@types/jest": "^26.0.10",
-    "@types/node": "^18.11.18",
+    "@types/node": "^20.14.2",
+    "@typescript-eslint/eslint-plugin": "4.33.0",
+    "@typescript-eslint/parser": "4.33.0",
     "esbuild": "^0.16.15",
+    "eslint": "7.11.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
     "jest": "^26.4.2",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.2.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
@@ -24,8 +34,11 @@
   "dependencies": {
     "@aws-sdk/client-ec2": "^3.245.0",
     "@aws-sdk/client-ecs": "^3.245.0",
-    "aws-cdk-lib": "^2.59.0",
-    "constructs": "^10.1.213",
-    "dotenv": "^16.0.3"
-  }
+    "aws-cdk": "^2.144.0",
+    "aws-cdk-lib": "^2.144.0",
+    "constructs": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "eslint-visitor-keys": "^4.0.0"
+  },
+  "packageManager": "yarn@3.6.0"
 }
